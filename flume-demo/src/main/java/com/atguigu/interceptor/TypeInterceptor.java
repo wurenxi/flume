@@ -32,10 +32,10 @@ public class TypeInterceptor implements Interceptor {
         String body = new String(event.getBody());
 
         // 2.根据body中是否包含"atguigu"添加不同的头信息
-        if(body.contains("atguigu")){
-            headers.put("type","atguigu");
+        if(body.contains("hello")){
+            headers.put("topic","first");
         }else{
-            headers.put("type","other");
+            headers.put("topic","second");
         }
 
         // 返回数据
